@@ -3,10 +3,11 @@
     {
       "id": "01",
       "title": "Beethoven Sonatas",
+      "rating": 3,
       "songs": [
         {
           "id": "04",
-          "title": "Piano Sonata No. 3",
+          "title": "Piano Sonata No. 4",
           "artist": "Beethoven"
         },
         {
@@ -29,6 +30,7 @@
     {
       "id": "02",
       "title": "Beethoven Concertos",
+      "rating": 4,
       "songs": [
         {
           "id": "07",
@@ -46,16 +48,6 @@
           "artist": "Beethoven"
         }
       ]
-    },
-    {
-      "id": "03",
-      "title": "Beethoven Unfinished Symphonies",
-      "songs": []
-    },
-    {
-      "id": "795fe4b9-e30d-4677-a2a5-23d668fd02fd",
-      "title": "Beethoven Greatest Hits",
-      "songs": []
     }
   ]
 }
