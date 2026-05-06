@@ -21,3 +21,12 @@ body {
 .hide{
     display: none;
 }
+
+.editSubmit {
+  border:none;
+  background: none;
+}
+
+table {
+  margin:auto
+}
