@@ -1,60 +1,21 @@
 <section class="ui left aligned middle aligned segment">
 
-  <h2>Playlist App Dashboard</h2>
+  {{> dashboardHeader }}
 
-  {{#unless playlists}}
+  {{#unless search}}
+    {{#unless playlists}}
     <h3 class="ui message">
       Start adding your playlists!
     </h3>
+    {{/unless}}
   {{/unless}}
 
-  {{#each playlists}}
-    <section class="ui left aligned middle aligned segment">
-
-      <h3 class="ui header">
-        {{uppercase title}}
-      </h3>
-
-      <p>
-        <i class="music icon"></i>
-        {{#if songs}}
-          Total songs:
-          {{songs.length}}
-        {{else}}
-          Empty playlist!
-        {{/if}}
-
-        {{#if date}}
-          <br />
-          <i class="calendar alternate outline icon"></i>
-          Created on
-          <i>{{formatDate date}}</i>
-        {{/if}}
-      </p>
-
-      {{#if rating}}
-        <p>
-          <span
-            class="ui yellow disabled rating"
-            data-icon="star"
-            data-rating="{{rating}}"
-            data-max-rating="5">
-          </span>
-
-          <span style="color: grey; font-size: 90%; font-style: italic">
-            {{highlightPopular rating}}
-          </span>
-        </p>
-      {{/if}}
-
-      <a href="/playlist/{{id}}">
-        <i class="ui open folder outline black icon"></i>
-      </a>
-
-      <a href="/dashboard/deleteplaylist/{{id}}">
-        <i class="ui trash black icon"></i>
-      </a>
-    </section>
-  {{/each}}
+  <div class="ui centered cards">
+    
+    {{#each playlists}}
+      {{> playlistCard}}
+    {{/each}}
+    
+  </div>
 
 </section>
